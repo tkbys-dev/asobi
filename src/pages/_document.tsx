@@ -11,6 +11,9 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <link rel="shortcut icon" type="image/x-icon" href="/sample/favicon.png" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Vujahday+Script&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

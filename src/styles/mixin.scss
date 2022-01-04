@@ -1,0 +1,26 @@
+@use "sass:math";
+$vwSp: 375;
+$vwPc: 1920;
+
+// $breakpoint: (
+//   xs: "screen and (max-width: 767px)",
+//   sm: "screen and (min-width: 768px)",
+//   md: "screen and (max-width: 980px)",
+//   lg: "screen and (min-width: 981px)",
+// );
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}
+
+@function get_vw($size, $viewport: $vwSp) {
+  // $rate: 100 / $viewport;
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vw;
+}
+@mixin fz_vw($fontsize: 10, $viewport: $vwSp) {
+  font-size: $fontsize * 1px;
+  font-size: get_vw($fontsize, $viewport);
+}
