@@ -1,17 +1,22 @@
 @import 'mixin.scss';
 
 .header {
-  position: fixed;
+  // position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: get_vw(50, $vwPc);
+  padding: get_vw(50, $vwPc) get_vw(50, $vwPc) 0;
+  margin-bottom: get_vw(100, $vwPc);
+  @include fz_vw(30, $vwPc);
   &_nav {
     &_list {
       display: flex;
       &_item {
-
+        margin-right: get_vw(50, $vwPc);
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
-// import Head from 'next/head';
+import Link from 'next/link';
 import HeadMeta from '@/components/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/Contents.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -11,14 +11,18 @@ const Home: NextPage = () => {
       <HeadMeta props={undefined} />
       <Header props={undefined}></Header>
       <main className={styles.main}>
-        <h2 className={styles.page_title}>株式会社a</h2>
-        <div className={styles.works_block}>
-          <a href="" className={styles.works_prev}></a>
-          <div className={styles.works_detail}>
-            <p className={styles.text}>広告、映像、サイトリニューアルを担当しました。広告、映像、サイトリニューアルを担当しました。広告、映像、サイトリニューアルを担当しました。</p>
-            <p className={styles.text}>Promotion, Video, Web / 株式会社abc</p>
+        <div className={styles.main_inner}>
+          <h2 className={styles.page_title}>Sample aaaa bbbb cccc</h2>
+          <div className={styles.works_each}>
+            <Link href="/works/a"><a className={`${styles.btn} ${styles.prev}`}></a></Link>
+            <div className={styles.works_detail}>
+              <div className={styles.text}>
+                <p>広告、映像、サイトリニューアルを担当しました。広告、映像、サイトリニューアルを担当しました。広告、映像、サイトリニューアルを担当しました。</p>
+                <p>Promotion, Video, Web / 株式会社b</p>
+              </div>
+            </div>
+            <Link href="/works/c"><a className={`${styles.btn} ${styles.next}`}></a></Link>
           </div>
-          <a href="" className={styles.works_next}></a>
         </div>
       </main>
       <Footer props={undefined}></Footer>
