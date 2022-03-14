@@ -10,7 +10,13 @@ const Home: NextPage = () => {
       <HeadMeta props={undefined} />
       <Header props={undefined} />
       <main className={styles.top}>
-        <h1 className={styles.hero_title}>test<br />sample, sample, sample<br />test, test, test, test, test, test, test, test</h1>
+        <h1 className={styles.hero_title}>
+          test
+          <br />
+          sample, sample, sample
+          <br />
+          test, test, test, test, test, test, test, test
+        </h1>
       </main>
     </>
   );

@@ -4,20 +4,29 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "production": "NEXT_PUBLIC_BUILD_ENV=production next build && NEXT_PUBLIC_BUILD_ENV=production next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "airtable": "^0.11.2",
+    "dotenv": "^16.0.0",
+    "framer-motion": "^6.2.8",
     "next": "12.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ress": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "16.11.11",
     "@types/react": "17.0.37",
+    "autoprefixer": "^10.4.2",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
     "sass": "^1.44.0",
+    "tailwindcss": "^3.0.16",
     "typescript": "4.5.2"
   },
   "prettier": {

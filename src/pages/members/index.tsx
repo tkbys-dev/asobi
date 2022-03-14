@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import HeadMeta from '@/components/head';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/Contents.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -11,18 +11,128 @@ const Home: NextPage = () => {
       <HeadMeta props={undefined} />
       <Header props={undefined}></Header>
       <main className={styles.main}>
-        <h2 className={styles.page_title}>Members</h2>
-        <ul className={styles.members}>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-          <li className={styles.members_item}><img src='' width='501' height='400' alt='' /><h3>山田　太郎</h3><p>社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。</p></li>
-        </ul>
+        <div className={styles.main_inner}>
+          <h2 className={styles.page_title}>Members</h2>
+          <ul className={styles.members}>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+            <li className={styles.members_item}>
+              <img
+                src="/assets/img/members/member.jpg"
+                width="500"
+                height="400"
+                className={styles.members_img}
+                alt=""
+              />
+              <h3 className={styles.members_name}>山田　太郎</h3>
+              <p className={styles.members_description}>
+                社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。社員の説明。
+              </p>
+            </li>
+          </ul>
+        </div>
       </main>
       <Footer props={undefined}></Footer>
     </>

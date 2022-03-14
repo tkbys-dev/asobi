@@ -6,3 +6,7 @@ body {
   font-family: 'Noto Sans', sans-serif;
   @include fz_vw(20, $vwPc);
 }
+
+.dec {
+  font-size: 96px;
+}

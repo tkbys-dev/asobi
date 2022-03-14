@@ -22,7 +22,7 @@
     @include fz_vw(60, $vwPc);
   }
   &_head {
-
+    margin-bottom: get_vw(200, $vwPc);
   }
 }
 
@@ -34,7 +34,7 @@
     width: 32%;
     margin-right: get_vw(28, $vwPc);
     aspect-ratio: 3/2;
-    background-image: url('/sample/assets/img/works/works-item@2x.jpg');
+    background-image: url('/assets/img/works/works-item@2x.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -42,7 +42,7 @@
       margin-right: 0;
     }
     &:nth-child(n + 4) {
-    margin-top: get_vw(160, $vwPc);
+      margin-top: get_vw(160, $vwPc);
     }
     a {
       display: flex;
@@ -86,7 +86,7 @@
       background-color: #fff;
       transition: 0.3s;
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         bottom: 0;
@@ -98,7 +98,7 @@
         margin: auto;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        background-image: url('/sample/assets/img/works/works-arrow.svg');
+        background-image: url('/assets/img/works/works-arrow.svg');
         background-size: contain;
         transition: 0.3s;
       }
@@ -127,7 +127,7 @@
     position: relative;
     flex: 1;
     aspect-ratio: 1.4/1;
-    background-image: url('/sample/assets/img/works/works-each@2x.jpg');
+    background-image: url('/assets/img/works/works-each@2x.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -200,5 +200,128 @@
       margin: 10px 0 0 calc(150px + 10px);
       line-height: 1.5;
     }
+  }
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  &_item {
+    width: 32%;
+    margin-right: 2%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-child(n + 4) {
+      margin-top: get_vw(160, $vwPc);
+    }
+  }
+  &_img {
+    aspect-ratio: 1.25/1;
+    width: 100%;
+    height: auto;
+    margin-bottom: get_vw(30, $vwPc);
+  }
+  &_name {
+    margin-bottom: get_vw(20, $vwPc);
+    text-align: center;
+    @include fz_vw(30, $vwPc);
+  }
+  &_description {
+    line-height: 1.5;
+    @include fz_vw(30, $vwPc);
+  }
+}
+
+.careers {
+  &_type {
+    margin-bottom: get_vw(150, $vwPc);
+  }
+  &_item {
+    margin-bottom: get_vw(100, $vwPc);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &_title {
+    margin-bottom: get_vw(25, $vwPc);
+    @include fz_vw(40, $vwPc);
+  }
+  &_text {
+    line-height: 1.5;
+    @include fz_vw(16, $vwPc);
+  }
+  &_condition {
+    margin-bottom: get_vw(200, $vwPc);
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    dt {
+      width: 150px;
+      margin: 0 10px 50px 0;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    dd {
+      width: calc(100% - 160px);
+    }
+  }
+}
+
+.form {
+  &_wrap {
+    display: flex;
+    padding: get_vw(30, $vwPc) 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    &:nth-of-type(n + 2) {
+      border-top: none;
+    }
+  }
+  &_label {
+    width: 250px;
+    margin-right: 10px;
+  }
+  &_input {
+    width: calc(100% - 260px);
+    input,
+    textarea {
+      width: 100%;
+    }
+    textarea {
+      resize: none;
+    }
+  }
+  &_accept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: get_vw(50, $vwPc) 0 get_vw(150, $vwPc);
+    text-align: center;
+    input {
+      width: get_vw(30, $vwPc);
+      height: get_vw(30, $vwPc);
+    }
+    span {
+      margin-left: 30px;
+    }
+  }
+}
+
+.btn_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: get_vw(593, $vwPc);
+    height: get_vw(150, $vwPc);
+    background-color: #fff;
+    color: #000;
+    @include fz_vw(30, $vwPc);
   }
 }
