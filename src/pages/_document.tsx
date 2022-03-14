@@ -1,4 +1,10 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -10,10 +16,13 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <link rel="shortcut icon" type="image/x-icon" href="/sample/favicon.png" />
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Vujahday+Script&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Vujahday+Script&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

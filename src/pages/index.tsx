@@ -1,13 +1,16 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import HeadMeta from '@/components/head';
+import Meta from '@/components/meta';
 import Header from '@/components/header';
 import styles from '@/styles/Top.module.scss';
+import { getMeta } from './api/airtable';
+import { MetaInfo, PageProps } from 'interfaces';
 
-const Home: NextPage = () => {
+export default function Home({ meta }: PageProps) {
+  // console.log(meta?.title);
   return (
     <>
-      <HeadMeta props={undefined} />
+      <Meta meta={meta} />
       <Header props={undefined} />
       <main className={styles.top}>
         <h1 className={styles.hero_title}>
@@ -20,6 +23,13 @@ const Home: NextPage = () => {
       </main>
     </>
   );
-};
+}
 
-export default Home;
+export const getStaticProps: GetStaticProps = async () => {
+  const meta = await getMeta();
+
+  // console.log(meta);
+  return {
+    props: meta,
+  };
+};
