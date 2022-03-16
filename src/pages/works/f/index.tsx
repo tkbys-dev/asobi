@@ -8,8 +8,6 @@ import styles from '@/styles/Contents.module.scss';
 const Home: NextPage = () => {
   return (
     <>
-      <Meta />
-      <Header props={undefined}></Header>
       <main className={styles.main}>
         <div className={styles.main_inner}>
           <h2 className={styles.page_title}>Sample aaaa bbbb cccc</h2>
@@ -31,7 +29,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-      <Footer props={undefined}></Footer>
     </>
   );
 };

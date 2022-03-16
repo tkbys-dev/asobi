@@ -1,15 +1,22 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import Meta from '@/components/meta';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import styles from '@/styles/Contents.module.scss';
+import { PageProps } from 'interfaces';
+import { getMeta } from 'pages/api/airtable';
 
-const Home: NextPage = () => {
+export default function Home({ meta }: PageProps) {
   return (
     <>
-      <Meta />
-      <Header props={undefined}></Header>
+      <Head>
+        <title>aaaaaa</title>
+        <meta name="description" content="aaaaaa" />
+        <meta name="keywords" content="aa,bb,cc" />
+        <meta property="og:url" content="aaaa.jp" />
+      </Head>
       <main className={styles.main}>
         <div className={styles.main_inner_s}>
           <h2 className={styles.page_title}>About</h2>
@@ -56,9 +63,15 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-      <Footer props={undefined}></Footer>
     </>
   );
-};
+}
 
-export default Home;
+export const getStaticProps: GetStaticProps = async () => {
+  const meta = await getMeta();
+
+  // console.log(meta);
+  return {
+    props: meta,
+  };
+};

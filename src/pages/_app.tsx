@@ -1,10 +1,15 @@
 import '@/styles/reset.css';
 import '@/styles/base.scss';
 import 'tailwindcss/tailwind.css';
-import type { AppProps } from 'next/app'
+import Layout from '@/components/Layout';
+import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
-export default MyApp
+export default MyApp;

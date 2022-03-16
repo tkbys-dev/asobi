@@ -10,8 +10,12 @@ export default function Home({ meta }: PageProps) {
   // console.log(meta?.title);
   return (
     <>
-      <Meta meta={meta} />
-      <Header props={undefined} />
+      <Head>
+        <title>{meta?.title}</title>
+        <meta name="description" content={meta?.description} />
+        <meta name="keywords" content={meta?.keywords} />
+        <meta property="og:url" content={meta?.url} />
+      </Head>
       <main className={styles.top}>
         <h1 className={styles.hero_title}>
           test

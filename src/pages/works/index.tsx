@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Meta />
-      <Header props={undefined}></Header>
+      <Header />
       <main className={styles.main}>
         <div className={styles.main_inner}>
           <h2 className={styles.page_title}>Works</h2>
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </main>
-      <Footer props={undefined}></Footer>
+      <Footer />
     </>
   );
 };
