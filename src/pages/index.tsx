@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Meta from '@/components/meta';
-import Header from '@/components/header';
+import Header from '@/components/Header';
 import styles from '@/styles/Top.module.scss';
 import { getMeta } from './api/airtable';
 import { MetaInfo, PageProps } from 'interfaces';

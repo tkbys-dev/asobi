@@ -44,6 +44,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
+      <a href="#top">pageTop</a>
     </footer>
   );
 }
