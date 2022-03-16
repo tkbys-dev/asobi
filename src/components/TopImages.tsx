@@ -29,34 +29,36 @@ export default function topImages() {
     <div className="top_image">
       <motion.div className="top_image-area" ref={constraintsRef}></motion.div>
       <motion.img
-        initial={{ x: 200, y: 50 }}
-        animate={{ x: 200, y: 50 }}
-        // exit={{ x: 0, y: 0 }}
+        initial={{ x: 0, y: 0, top: '5%', left: '15%' }}
+        animate={{
+          top: '5%',
+          left: '15%',
+        }}
         drag
-        // dragConstraints={{ top: 50, bottom: 50, left: 200, right: 200 }}
         dragConstraints={constraintsRef}
-        // x={x}
+        // dragConstraints={{ top: 50, bottom: 50, left: 200, right: 200 }}
         src="/asobi/assets/img/top/test1.jpg"
         alt=""
         width="300"
         // height="300"
       />
       <motion.img
-        initial={{ x: 900, y: 80 }}
-        animate={{ x: 900, y: 80 }}
+        initial={{ x: 0, y: 0, top: '20%', left: '85%' }}
+        animate={{ top: '20%', left: '85%' }}
         drag
-        dragConstraints={{ top: 80, bottom: 80, left: 900, right: 900 }}
-        // x={x}
+        dragConstraints={constraintsRef}
+        // dragConstraints={{ top: 80, bottom: 80, left: 900, right: 900 }}
         src="/asobi/assets/img/top/test2.jpg"
         alt=""
         width="300"
         // height="300"
       />
       <motion.img
-        initial={{ x: 1000, y: 800 }}
-        animate={{ x: 1000, y: 800 }}
+        initial={{ x: 0, y: 0, top: '80%', left: '5%' }}
+        animate={{ top: '80%', left: '5%' }}
         drag
-        dragConstraints={{ top: 800, bottom: 800, left: 1000, right: 1000 }}
+        dragConstraints={constraintsRef}
+        // dragConstraints={{ top: 800, bottom: 800, left: 1000, right: 1000 }}
         // x={x}
         src="/asobi/assets/img/top/test3.jpg"
         alt=""
@@ -64,10 +66,11 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
-        initial={{ x: 50, y: 670 }}
-        animate={{ x: 50, y: 670 }}
+        initial={{ x: 0, y: 0, top: '60%', left: '75%' }}
+        animate={{ top: '60%', left: '75%' }}
         drag
-        dragConstraints={{ top: 670, bottom: 670, left: 50, right: 50 }}
+        dragConstraints={constraintsRef}
+        // dragConstraints={{ top: 670, bottom: 670, left: 50, right: 50 }}
         // x={x}
         src="/asobi/assets/img/top/test4.jpg"
         alt=""
@@ -75,10 +78,11 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
-        initial={{ x: 0, y: 400 }}
-        animate={{ x: 0, y: 400 }}
+        initial={{ x: 0, y: 0, top: '60%', left: '40%' }}
+        animate={{ top: '60%', left: '40%' }}
         drag
-        dragConstraints={{ top: 400, bottom: 400, left: 0, right: 0 }}
+        dragConstraints={constraintsRef}
+        // dragConstraints={{ top: 400, bottom: 400, left: 0, right: 0 }}
         // x={x}
         src="/asobi/assets/img/top/test5.jpg"
         alt=""
@@ -86,10 +90,11 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
-        initial={{ x: 600, y: 300 }}
-        animate={{ x: 600, y: 300 }}
+        initial={{ x: 0, y: 0, top: '10%', left: '55%' }}
+        animate={{ top: '10%', left: '55%' }}
         drag
-        dragConstraints={{ top: 300, bottom: 300, left: 600, right: 600 }}
+        dragConstraints={constraintsRef}
+        // dragConstraints={{ top: 300, bottom: 300, left: 600, right: 600 }}
         // x={x}
         src="/asobi/assets/img/top/test6.jpg"
         alt=""
