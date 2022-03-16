@@ -1,8 +1,5 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import Meta from '@/components/meta';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
 import styles from '@/styles/Contents.module.scss';
 
 const Home: NextPage = () => {
