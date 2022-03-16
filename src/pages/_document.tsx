@@ -24,7 +24,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body id="top">
+        <body id="body">
           <Main />
           <NextScript />
         </body>

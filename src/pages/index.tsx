@@ -1,13 +1,10 @@
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Meta from '@/components/meta';
-import Header from '@/components/Header';
-import styles from '@/styles/Top.module.scss';
 import { getMeta } from './api/airtable';
-import { MetaInfo, PageProps } from 'interfaces';
+import { PageProps } from 'interfaces';
+import TopImages from '@/components/TopImages';
 
 export default function Home({ meta }: PageProps) {
-  // console.log(meta?.title);
   return (
     <>
       <Head>
@@ -16,15 +13,14 @@ export default function Home({ meta }: PageProps) {
         <meta name="keywords" content={meta?.keywords} />
         <meta property="og:url" content={meta?.url} />
       </Head>
-      <main className={styles.top}>
-        <h1 className={styles.hero_title}>
-          test
-          <br />
-          sample, sample, sample
-          <br />
-          test, test, test, test, test, test, test, test
-        </h1>
-      </main>
+      <TopImages />
+      <h1 className="top_title">
+        test
+        <br />
+        sample, sample, sample
+        <br />
+        test, test, test, test, test, test, test, test
+      </h1>
     </>
   );
 }
