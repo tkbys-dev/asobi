@@ -1,15 +1,9 @@
 import type { NextPage } from 'next';
-// import Head from 'next/head';
-import Meta from '@/components/meta';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
 import styles from '@/styles/Contents.module.scss';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Meta />
-      <Header />
       <main className={styles.main}>
         <div className={styles.main_inner}>
           <h2 className={styles.page_title}>Members</h2>
@@ -134,7 +128,6 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </main>
-      <Footer />
     </>
   );
 };
