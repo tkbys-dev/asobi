@@ -7,7 +7,7 @@ export default function Header() {
       <Link href="/">
         <a>
           <img
-            src="/assets/img/common/header-logo.svg"
+            src="/asobi/assets/img/common/header-logo.svg"
             className={styles.header_logo}
             width="132"
             height="49"
