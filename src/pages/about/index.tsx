@@ -1,6 +1,5 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import styles from '@/styles/Contents.module.scss';
 import { PageProps } from 'interfaces';
 import { getMeta } from 'pages/api/airtable';
 
@@ -13,22 +12,22 @@ export default function Home({ meta }: PageProps) {
         <meta name="keywords" content="aa,bb,cc" />
         <meta property="og:url" content="aaaa.jp" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.main_inner_s}>
-          <h2 className={styles.page_title}>About</h2>
-          <div className={styles.about}>
-            <p className={styles.page_head}>
+      <main className="main">
+        <div className="main_inner_s">
+          <h2 className="page_title">About</h2>
+          <div className="about">
+            <p className="page_head">
               私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは
             </p>
-            <p className={styles.page_head}>
+            <p className="page_head">
               私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは
             </p>
-            <p className={styles.page_head}>
+            <p className="page_head">
               私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは
             </p>
           </div>
-          <div className={styles.company}>
-            <h3 className={styles.company_title}>Company</h3>
+          <div className="company">
+            <h3 className="company_title">Company</h3>
             <dl>
               <dt>会社名</dt>
               <dd>株式会社test</dd>

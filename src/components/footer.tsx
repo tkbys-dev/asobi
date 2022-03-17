@@ -1,43 +1,42 @@
 import Link from 'next/link';
-import styles from '@/styles/Footer.module.scss';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className="footer">
       <Link href="/">
-        <a className={styles.footer_link}>
+        <a className="footer_link">
           <img
             src="/asobi/assets/img/common/footer-logo.svg"
-            className={styles.footer_logo}
+            className="footer_logo"
             width="132"
             height="49"
             alt="test. inc"
           />
         </a>
       </Link>
-      <nav className={styles.footer_nav}>
-        <ul className={styles.footer_nav_list}>
-          <li className={styles.footer_nav_list_item}>
+      <nav className="footer_nav">
+        <ul className="footer_nav_list">
+          <li className="footer_nav_list_item">
             <Link href="/works">
               <a>Works</a>
             </Link>
           </li>
-          <li className={styles.footer_nav_list_item}>
+          <li className="footer_nav_list_item">
             <Link href="/about">
               <a>About</a>
             </Link>
           </li>
-          <li className={styles.footer_nav_list_item}>
+          <li className="footer_nav_list_item">
             <Link href="/members">
               <a>Members</a>
             </Link>
           </li>
-          <li className={styles.footer_nav_list_item}>
+          <li className="footer_nav_list_item">
             <Link href="/careers">
               <a>Careers</a>
             </Link>
           </li>
-          <li className={styles.footer_nav_list_item}>
+          <li className="footer_nav_list_item">
             <Link href="/contact">
               <a>Contact</a>
             </Link>

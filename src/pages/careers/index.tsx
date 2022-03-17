@@ -1,36 +1,35 @@
 import type { NextPage } from 'next';
-import styles from '@/styles/Contents.module.scss';
 
 const Home: NextPage = () => {
   return (
     <>
-      <main className={styles.main}>
-        <div className={styles.main_inner_s}>
-          <h2 className={styles.page_title}>Careers</h2>
-          <p className={styles.page_head}>
+      <main className="main">
+        <div className="main_inner_s">
+          <h2 className="page_title">Careers</h2>
+          <p className="page_head">
             現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。
           </p>
-          <div className={styles.careers_type}>
-            <div className={styles.careers_item}>
-              <h3 className={styles.careers_title}>ディレクター</h3>
-              <p className={styles.careers_text}>
+          <div className="careers_type">
+            <div className="careers_item">
+              <h3 className="careers_title">ディレクター</h3>
+              <p className="careers_text">
                 現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。
               </p>
             </div>
-            <div className={styles.careers_item}>
-              <h3 className={styles.careers_title}>デザイナー</h3>
-              <p className={styles.careers_text}>
+            <div className="careers_item">
+              <h3 className="careers_title">デザイナー</h3>
+              <p className="careers_text">
                 現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。
               </p>
             </div>
-            <div className={styles.careers_item}>
-              <h3 className={styles.careers_title}>エンジニア</h3>
-              <p className={styles.careers_text}>
+            <div className="careers_item">
+              <h3 className="careers_title">エンジニア</h3>
+              <p className="careers_text">
                 現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。現在、ディレクター、デザイナー、エンジニアの募集を行っております。
               </p>
             </div>
           </div>
-          <div className={styles.careers_condition}>
+          <div className="careers_condition">
             <dl>
               <dt>給与・待遇</dt>
               <dd>スキル・経験などを考慮</dd>
@@ -56,7 +55,7 @@ const Home: NextPage = () => {
               <dd>東京本社下のエントリーフォームよりご応募ください</dd>
             </dl>
           </div>
-          <div className={styles.btn_wrap}>
+          <div className="btn_wrap">
             <button>Entry</button>
           </div>
         </div>

@@ -1,20 +1,18 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
-import styles from '@/styles/Contents.module.scss';
-
 const Home: NextPage = () => {
   return (
     <>
-      <main className={styles.main}>
-        <div className={styles.main_inner}>
-          <h2 className={styles.page_title}>Sample aaaa bbbb cccc</h2>
-          <div className={styles.works_each}>
+      <main className="main">
+        <div className="main_inner">
+          <h2 className="page_title">Sample aaaa bbbb cccc</h2>
+          <div className="works_each">
             <Link href="/works/d">
-              <a className={`${styles.btn} ${styles.prev}`}></a>
+              <a className="btn prev"></a>
             </Link>
-            <div className={styles.works_detail}>
-              <div className={styles.text}>
+            <div className="works_detail">
+              <div className="text">
                 <p>
                   広告、映像、サイトリニューアルを担当しました。広告、映像、サイトリニューアルを担当しました。広告、映像、サイトリニューアルを担当しました。
                 </p>
@@ -22,7 +20,7 @@ const Home: NextPage = () => {
               </div>
             </div>
             <Link href="/works/f">
-              <a className={`${styles.btn} ${styles.next}`}></a>
+              <a className="btn next"></a>
             </Link>
           </div>
         </div>
