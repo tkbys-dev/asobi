@@ -10,7 +10,7 @@ export default function Footer() {
             className="footer_logo"
             width="132"
             height="49"
-            alt="test. inc"
+            alt="test. in"
           />
         </a>
       </Link>
