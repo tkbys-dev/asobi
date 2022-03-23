@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
+// import { motion } from "framer-motion-3d"
 
 const imageList: string[] = [
   '/asobi/assets/img/top/test1.jpg',
@@ -29,7 +30,7 @@ export default function topImages() {
     <div className="top_image">
       <motion.div className="top_image-area" ref={constraintsRef}></motion.div>
       <motion.img
-        whileHover={{ scale: 0.9 }}
+        // whileHover={{ scale: 0.9 }}
         whileTap={{ scale: 0.9 }}
         initial={{ x: 0, y: 0, top: '5%', left: '15%' }}
         animate={{
@@ -38,7 +39,6 @@ export default function topImages() {
         }}
         drag
         dragConstraints={constraintsRef}
-        dragTransition={{ bounceStiffness: 500, bounceDamping: 10 }}
         // dragConstraints={{ top: 50, bottom: 50, left: 200, right: 200 }}
         src="/asobi/assets/img/top/test1.jpg"
         alt=""
