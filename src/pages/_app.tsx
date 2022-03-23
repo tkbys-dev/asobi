@@ -9,9 +9,9 @@ import { AnimatePresence } from 'framer-motion';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AnimatePresence>
-      {/* <Layout> */}
-      <Component {...pageProps} />
-      {/* </Layout> */}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </AnimatePresence>
   );
 }

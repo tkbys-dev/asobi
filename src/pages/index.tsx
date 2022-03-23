@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { getMeta } from './api/airtable';
 import { PageProps } from 'interfaces';
 import TopImages from '@/components/TopImages';
-// import Mesh from '@/components/Mesh';
+import Mesh from '@/components/Mesh';
 
 export default function Home({ meta }: PageProps) {
   return (
@@ -15,7 +15,7 @@ export default function Home({ meta }: PageProps) {
         <meta property="og:url" content={meta?.url} />
       </Head>
       <TopImages />
-      {/* <Mesh /> */}
+      <Mesh />
       <h1 className="top_title">
         test
         <br />
