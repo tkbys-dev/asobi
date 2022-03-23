@@ -1,6 +1,3 @@
-[dev]
-  command = "yarn dev"
-
 [build]
   base = "src/"
   publish = "out/"
