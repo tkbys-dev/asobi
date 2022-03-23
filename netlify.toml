@@ -2,6 +2,6 @@
   command = "yarn dev"
 
 [build]
-  base = "asobi/src/"
+  base = "src/"
   publish = "out/"
   command = "yarn build"
