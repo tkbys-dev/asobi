@@ -46,6 +46,7 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
+        whileTap={{ scale: 0.9 }}
         initial={{ x: 0, y: 0, top: '20%', left: '85%' }}
         animate={{ top: '20%', left: '85%' }}
         drag
@@ -57,6 +58,7 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
+        whileTap={{ scale: 0.9 }}
         initial={{ x: 0, y: 0, top: '80%', left: '5%' }}
         animate={{ top: '80%', left: '5%' }}
         drag
@@ -69,6 +71,7 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
+        whileTap={{ scale: 0.9 }}
         initial={{ x: 0, y: 0, top: '60%', left: '75%' }}
         animate={{ top: '60%', left: '75%' }}
         drag
@@ -81,6 +84,7 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
+        whileTap={{ scale: 0.9 }}
         initial={{ x: 0, y: 0, top: '60%', left: '40%' }}
         animate={{ top: '60%', left: '40%' }}
         drag
@@ -93,6 +97,7 @@ export default function topImages() {
         // height="300"
       />
       <motion.img
+        whileTap={{ scale: 0.9 }}
         initial={{ x: 0, y: 0, top: '10%', left: '55%' }}
         animate={{ top: '10%', left: '55%' }}
         drag
