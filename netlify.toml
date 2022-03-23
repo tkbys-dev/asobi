@@ -1,3 +1,4 @@
 [build]
   # base = "asobi/"
   publish = "asobi/out/"
+  command = "yarn build && pwd"
