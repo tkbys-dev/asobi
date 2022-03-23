@@ -2,20 +2,21 @@ import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { getMeta } from './api/airtable';
 import { PageProps } from 'interfaces';
-import TopImages from '@/components/TopImages';
-import Mesh from '@/components/Mesh';
+// import TopImages from '@/components/TopImages';
+// import Mesh from '@/components/Mesh';
 
 export default function Home({ meta }: PageProps) {
   return (
     <>
       <Head>
-        <title>{meta?.title}</title>
+        {/* <title>{meta?.title}</title>
         <meta name="description" content={meta?.description} />
         <meta name="keywords" content={meta?.keywords} />
-        <meta property="og:url" content={meta?.url} />
+        <meta property="og:url" content={meta?.url} /> */}
+        <title>aaaaaa</title>
       </Head>
-      <TopImages />
-      <Mesh />
+      {/* <TopImages />
+      <Mesh /> */}
       <h1 className="top_title">
         test
         <br />
@@ -27,11 +28,10 @@ export default function Home({ meta }: PageProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const meta = await getMeta();
+// export const getStaticProps: GetStaticProps = async () => {
+//   const meta = await getMeta();
 
-  // console.log(meta);
-  return {
-    props: meta,
-  };
-};
+//   return {
+//     props: meta,
+//   };
+// };

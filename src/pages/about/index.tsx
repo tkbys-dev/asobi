@@ -62,11 +62,10 @@ export default function Home({ meta }: PageProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const meta = await getMeta();
+// export const getStaticProps: GetStaticProps = async () => {
+//   const meta = await getMeta();
 
-  // console.log(meta);
-  return {
-    props: meta,
-  };
-};
+//   return {
+//     props: meta,
+//   };
+// };
