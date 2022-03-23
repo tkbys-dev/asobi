@@ -9,10 +9,13 @@ export default function Home({ meta }: PageProps) {
   return (
     <>
       <Head>
-        <title>{meta?.title}</title>
+        {/* <title>{meta?.title}</title>
         <meta name="description" content={meta?.description} />
         <meta name="keywords" content={meta?.keywords} />
-        <meta property="og:url" content={meta?.url} />
+        <meta property="og:url" content={meta?.url} /> */}
+        <title>web遊び</title>
+        <meta name="description" content="これはwebで遊ぶためのサイトです" />
+        <meta name="keywords" content="web,遊び" />
       </Head>
       <TopImages />
       <Mesh />
