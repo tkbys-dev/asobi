@@ -1,4 +1,4 @@
 [build]
   base = "src"
-  publish = "out/"
+  publish = "out"
   command = "yarn install && yarn build"
