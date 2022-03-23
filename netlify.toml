@@ -2,8 +2,8 @@
   publish = "out/"
   command = "yarn install && yarn build"
 
-# [build.environment]
-#   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [[plugin]]
   package = "@netlify/plugin-nextjs"
