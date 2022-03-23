@@ -1,4 +1,4 @@
 [build]
   base = "src"
-  publish = ".next"
+  publish = "out"
   command = "yarn install && yarn build"
