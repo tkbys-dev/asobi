@@ -28,10 +28,10 @@ export default function Home({ meta }: PageProps) {
   );
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const meta = await getMeta();
+export const getStaticProps: GetStaticProps = async () => {
+  const meta = await getMeta();
 
-//   return {
-//     props: meta,
-//   };
-// };
+  return {
+    props: meta,
+  };
+};
