@@ -1,2 +1,3 @@
 [build]
-  publish = "out/"
+  base = "project/"
+  publish = "project/out/"
