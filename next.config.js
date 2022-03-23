@@ -5,5 +5,4 @@ module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
   basePath: buildEnv == 'production' ? '/' : '',
-  ignoreBuildErrors: true,
 };
