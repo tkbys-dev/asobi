@@ -32,7 +32,7 @@
     width: 32%;
     margin-right: get_vw(28, $vwPc);
     aspect-ratio: 3/2;
-    background-image: url('/asobi/assets/img/works/works-item@2x.jpg');
+    background-image: url('/assets/img/works/works-item@2x.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -96,7 +96,7 @@
         margin: auto;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        background-image: url('/asobi/assets/img/works/works-arrow.svg');
+        background-image: url('/assets/img/works/works-arrow.svg');
         background-size: contain;
         transition: 0.3s;
       }
@@ -125,7 +125,7 @@
     position: relative;
     flex: 1;
     aspect-ratio: 1.4/1;
-    background-image: url('/asobi/assets/img/works/works-each@2x.jpg');
+    background-image: url('/assets/img/works/works-each@2x.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

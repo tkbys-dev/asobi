@@ -6,7 +6,7 @@ export default function Footer() {
       <Link href="/">
         <a className="footer_link">
           <img
-            src="/asobi/assets/img/common/footer-logo.svg"
+            src="/assets/img/common/footer-logo.svg"
             className="footer_logo"
             width="132"
             height="49"

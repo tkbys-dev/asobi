@@ -9,7 +9,7 @@ const Home: NextPage = () => {
           <ul className="members">
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
             </li>
             <li className="members_item">
               <img
-                src="/asobi/assets/img/members/member.jpg"
+                src="/assets/img/members/member.jpg"
                 width="500"
                 height="400"
                 className="members_img"
