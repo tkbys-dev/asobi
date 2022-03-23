@@ -2,7 +2,7 @@ import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { getMeta } from './api/airtable';
 import { PageProps } from 'interfaces';
-// import TopImages from '@/components/TopImages';
+import TopImages from '@/components/TopImages';
 // import Mesh from '@/components/Mesh';
 
 export default function Home({ meta }: PageProps) {
@@ -14,8 +14,8 @@ export default function Home({ meta }: PageProps) {
         <meta name="keywords" content={meta?.keywords} />
         <meta property="og:url" content={meta?.url} />
       </Head>
-      {/* <TopImages />
-      <Mesh /> */}
+      <TopImages />
+      {/* <Mesh /> */}
       <h1 className="top_title">
         test
         <br />
