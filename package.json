@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.2.8",
     "@react-three/fiber": "^7.0.26",
     "airtable": "^0.11.2",
     "dotenv": "^16.0.0",
