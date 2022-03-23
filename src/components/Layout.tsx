@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-// import Header from '@/components/Header';
-// import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Layout({ children }: any) {
   const router = useRouter();
@@ -55,7 +55,7 @@ export default function Layout({ children }: any) {
       {(() => {
         if (router.pathname !== '/') {
           return (
-            /*<Footer />*/
+            // <Footer />
             <footer className="footer">
               <Link href="/">
                 <a className="footer_link">
