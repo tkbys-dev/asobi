@@ -1,4 +1,4 @@
 [build]
-  base = "/opt/build/repo/src"
-  publish = "/opt/build/repo/out"
+  # base = "/opt/build/repo/src"
+  publish = "out"
   command = "yarn install && yarn build"
