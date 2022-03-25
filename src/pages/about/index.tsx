@@ -1,10 +1,15 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { PageProps } from 'interfaces';
+import { MetaInfo, ServiceInfo } from 'interfaces';
 import { getMeta } from 'pages/api/airtable';
 import { client } from '../../libs/client';
 
-export default function Home({ meta }: PageProps) {
+interface Props {
+  meta?: MetaInfo;
+  service?: Array<ServiceInfo>;
+}
+
+const About: NextPage<Props> = ({ meta, service }) => {
   return (
     <>
       <Head>
@@ -58,14 +63,27 @@ export default function Home({ meta }: PageProps) {
             </dl>
           </div>
         </div>
+        <div className="service">
+          <ul>
+            {service?.map((s) => {
+              return (
+                <li key={s.id}>
+                  <img src={s.image.url} />
+                  <p>{s.body}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </main>
     </>
   );
-}
+};
+export default About;
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await client.get({
-    endpoint: 'product',
+    endpoint: 'service',
   });
 
   const meta = await getMeta();

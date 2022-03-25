@@ -9,16 +9,16 @@ export interface MetaInfo {
   url?: string;
 }
 
-export interface ApiProps {
-  service?: ServiceApi;
+export interface ServiceApi {
+  service?: Array<ServiceInfo>;
 }
 
-export interface ServiceApi {
+export interface ServiceInfo {
   id: string;
-  serviceImage: {
+  image: {
     url: string;
     width?: string;
     height?: string;
   };
-  serviceBody?: string;
+  body?: string;
 }

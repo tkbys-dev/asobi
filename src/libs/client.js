@@ -1,13 +1,13 @@
 import { createClient } from 'microcms-js-sdk';
 
 export const client = createClient({
-  serviceDomain: 'asmof',
+  serviceDomain: 'sample-sample-sample',
   apiKey: process.env.MICROCMS_API_KEY,
 });
 
 const getAllContents = async (offset = 0, limit = 10) => {
   const data = await client.get({
-    endpoint: 'news',
+    endpoint: 'service',
     queries: {
       offset,
       limit,
