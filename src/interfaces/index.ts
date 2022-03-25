@@ -8,3 +8,17 @@ export interface MetaInfo {
   keywords: string;
   url?: string;
 }
+
+export interface ApiProps {
+  service?: ServiceApi;
+}
+
+export interface ServiceApi {
+  id: string;
+  serviceImage: {
+    url: string;
+    width?: string;
+    height?: string;
+  };
+  serviceBody?: string;
+}

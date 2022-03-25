@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { PageProps } from 'interfaces';
 import { getMeta } from 'pages/api/airtable';
+import { client } from '../../libs/client';
 
 export default function Home({ meta }: PageProps) {
   return (
@@ -62,10 +63,17 @@ export default function Home({ meta }: PageProps) {
   );
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const meta = await getMeta();
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.get({
+    endpoint: 'product',
+  });
 
-//   return {
-//     props: meta,
-//   };
-// };
+  const meta = await getMeta();
+
+  return {
+    props: {
+      meta,
+      service: data.contents,
+    },
+  };
+};
