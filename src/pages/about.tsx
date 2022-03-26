@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { MetaInfo, ServiceInfo } from 'interfaces';
 import { getMeta } from 'pages/api/airtable';
-import { client } from '../../libs/client';
+import { client } from '../libs/client';
 
 interface Props {
   meta?: MetaInfo;
