@@ -63,7 +63,7 @@ const About: NextPage<Props> = ({ meta, service }) => {
             </dl>
           </div>
         </div>
-        <div className="service">
+        {/* <div className="service">
           <ul>
             {service?.map((s) => {
               return (
@@ -74,7 +74,7 @@ const About: NextPage<Props> = ({ meta, service }) => {
               );
             })}
           </ul>
-        </div>
+        </div> */}
       </main>
     </>
   );
