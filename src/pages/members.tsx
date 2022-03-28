@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 
 interface MemberConfig {
-  name: string;
+  name_ja: string;
+  name_en: string;
   description: string;
   alt: string;
 }
@@ -11,28 +12,73 @@ interface IMemberCard {
 }
 
 const MemberConfigs: MemberConfig[] = [
-  { name: '山田', description: 'テスト山田の説明', alt: 'テスト山田' },
-  { name: '鈴木', description: 'テスト鈴木の説明', alt: 'テスト鈴木' },
-  { name: '上杉', description: 'テスト上杉の説明', alt: 'テスト上杉' },
-  { name: '森', description: 'テスト森の説明', alt: 'テスト森' },
-  { name: '吉岡', description: 'テスト吉岡の説明', alt: 'テスト吉岡' },
-  { name: '古井', description: 'テスト古井の説明', alt: 'テスト古井' },
-  { name: '代々木', description: 'テスト代々木の説明', alt: 'テスト代々木' },
-  { name: '高橋', description: 'テスト高橋の説明', alt: 'テスト高橋' },
-  { name: '海元', description: 'テスト海元の説明', alt: 'テスト海元' },
+  {
+    name_ja: '山田',
+    name_en: 'yamada',
+    description: 'テスト山田の説明',
+    alt: 'テスト山田',
+  },
+  {
+    name_ja: '鈴木',
+    name_en: 'suzuki',
+    description: 'テスト鈴木の説明',
+    alt: 'テスト鈴木',
+  },
+  {
+    name_ja: '上杉',
+    name_en: 'uesugi',
+    description: 'テスト上杉の説明',
+    alt: 'テスト上杉',
+  },
+  {
+    name_ja: '森',
+    name_en: 'mori',
+    description: 'テスト森の説明',
+    alt: 'テスト森',
+  },
+  {
+    name_ja: '吉岡',
+    name_en: 'yoshioka',
+    description: 'テスト吉岡の説明',
+    alt: 'テスト吉岡',
+  },
+  {
+    name_ja: '古井',
+    name_en: 'furui',
+    description: 'テスト古井の説明',
+    alt: 'テスト古井',
+  },
+  {
+    name_ja: '代々木',
+    name_en: 'yoyogi',
+    description: 'テスト代々木の説明',
+    alt: 'テスト代々木',
+  },
+  {
+    name_ja: '高橋',
+    name_en: 'takahashi',
+    description: 'テスト高橋の説明',
+    alt: 'テスト高橋',
+  },
+  {
+    name_ja: '海元',
+    name_en: 'umimoto',
+    description: 'テスト海元の説明',
+    alt: 'テスト海元',
+  },
 ];
 
 const MemberCard = ({ config }: IMemberCard) => {
   return (
     <li className="members_item">
       <img
-        src="/assets/img/members/member.jpg"
+        src={`/assets/img/members/${config.name_en}.jpg`}
         width="500"
         height="400"
         className="members_img"
         alt={config.alt}
       />
-      <h3 className="members_name">{config.name}</h3>
+      <h3 className="members_name">{config.name_ja}</h3>
       <p className="members_description">{config.description}</p>
     </li>
   );
