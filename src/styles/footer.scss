@@ -1,18 +1,28 @@
 .footer {
   width: 100%;
-  padding: get_vw(50, $vwPc);
+  padding: 2rem 0 3.9rem 3rem;
   background-color: #fff;
   color: #000;
-  // @include fz_vw(30, $vwPc);
+  // @include fz_vw(30);
+  @include mq(md) {
+    padding: 5rem;
+  }
   &_link {
     display: block;
-    margin-bottom: get_vw(50, $vwPc);
+    margin-bottom: 1rem;
+    @include mq(md) {
+      margin-bottom: 5rem;
+    }
   }
   &_nav {
+    // display: none;
     &_list {
       display: flex;
       &_item {
-        margin-right: get_vw(50, $vwPc);
+        margin-right: get_vw(50);
+        @include mq(md) {
+          margin-right: 5rem;
+        }
         &:last-child {
           margin-right: 0;
         }

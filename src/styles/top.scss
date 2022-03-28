@@ -2,10 +2,10 @@
   &_title {
     position: absolute;
     top: 50%;
-    left: get_vw(182, $vwPc);
+    left: get_vw(182);
     transform: translateY(-50%);
     font-family: 'Vujahday Script', cursive;
-    @include fz_vw(60, $vwPc);
+    @include fz_vw(60);
   }
   &_image {
     // position: absolute;

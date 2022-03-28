@@ -1,11 +1,15 @@
 .main {
-  padding-bottom: get_vw(200, $vwPc);
+  padding-bottom: 10rem;
   &_inner {
-    width: get_vw(1557, $vwPc);
+    width: 155.7rem;
     margin: auto;
     &_s {
-      width: get_vw(961, $vwPc);
-      margin-left: get_vw(182, $vwPc);
+      width: 29.5rem;
+      margin: auto;
+      @include mq(md) {
+        width: 96.1rem;
+        margin-left: 18.2rem;
+      }
     }
   }
 }
@@ -13,14 +17,25 @@
 .page {
   &_title {
     display: inline-block;
-    margin-bottom: get_vw(100, $vwPc);
-    padding-bottom: 8px;
+    margin-bottom: 4rem;
+    padding-bottom: 5px;
     border-bottom: 1px solid #fff;
     line-height: 1;
-    @include fz_vw(60, $vwPc);
+    font-size: 4rem;
+    @include mq(md) {
+      font-size: 6rem;
+    }
   }
   &_head {
-    margin-bottom: get_vw(200, $vwPc);
+    margin-bottom: 2.5rem;
+    font-size: 1.4rem;
+    @include mq(md) {
+      margin-bottom: 5rem;
+      font-size: 2rem;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -30,7 +45,7 @@
   &_item {
     position: relative;
     width: 32%;
-    margin-right: get_vw(28, $vwPc);
+    margin-right: get_vw(28);
     aspect-ratio: 3/2;
     background-image: url('/assets/img/works/works-item@2x.jpg');
     background-repeat: no-repeat;
@@ -40,7 +55,7 @@
       margin-right: 0;
     }
     &:nth-child(n + 4) {
-      margin-top: get_vw(160, $vwPc);
+      margin-top: get_vw(160);
     }
     a {
       display: flex;
@@ -79,8 +94,8 @@
     .btn {
       position: relative;
       z-index: 20;
-      width: get_vw(182, $vwPc);
-      height: get_vw(670, $vwPc);
+      width: get_vw(182);
+      height: get_vw(670);
       background-color: #fff;
       transition: 0.3s;
       &::after {
@@ -91,8 +106,8 @@
         left: 0;
         right: 0;
         display: block;
-        width: get_vw(98, $vwPc);
-        height: get_vw(25, $vwPc);
+        width: get_vw(98);
+        height: get_vw(25);
         margin: auto;
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -104,7 +119,7 @@
         transform: scale(1.1);
         transition: 0.3s;
         &::after {
-          right: get_vw(15, $vwPc);
+          right: get_vw(15);
         }
       }
     }
@@ -116,7 +131,7 @@
       }
       &:hover {
         &::after {
-          right: get_vw(-15, $vwPc);
+          right: get_vw(-15);
         }
       }
     }
@@ -149,9 +164,9 @@
       color: #000;
       opacity: 0;
       transition: 0.2s;
-      @include fz_vw(40, $vwPc);
+      @include fz_vw(40);
       p {
-        margin-bottom: get_vw(30, $vwPc);
+        margin-bottom: get_vw(30);
       }
     }
     &:hover::after {
@@ -167,36 +182,60 @@
 }
 
 .about {
-  margin-bottom: get_vw(200, $vwPc);
-  .page_head {
-    margin-bottom: get_vw(50, $vwPc);
-    &:last-child {
-      margin-bottom: 0;
-    }
+  margin-bottom: 5rem;
+  @include mq(md) {
+    margin-bottom: 20rem;
   }
+  // .page_head {
+  //   margin-bottom: get_vw(50);
+  //   &:last-child {
+  //     margin-bottom: 0;
+  //   }
+  // }
 }
 
 .company {
   &_title {
-    margin-bottom: get_vw(50, $vwPc);
-    @include fz_vw(40, $vwPc);
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    @include mq(md) {
+      font-size: 4rem;
+      margin-bottom: 5rem;
+    }
   }
   dl {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
+    font-size: 1.4rem;
+    @include mq(md) {
+      font-size: 2rem;
+    }
+    & > div {
+      margin-bottom: 3rem;
+      @include mq(md) {
+        display: flex;
+        margin-bottom: 5rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   dt {
-    width: 150px;
-    margin: 0 10px 50px 0;
+    width: 15rem;
+    margin-right: 1rem;
   }
   dd {
-    width: calc(100% - 160px);
-    &:nth-of-type(6) {
-      line-height: 1.5;
-    }
-    &:last-of-type {
-      margin: 10px 0 0 calc(150px + 10px);
-      line-height: 1.5;
+    // width: calc(100% - 160px);
+    // &:nth-of-type(6) {
+    //   line-height: 1.5;
+    // }
+    // &:last-of-type {
+    //   margin: 10px 0 0 calc(150px + 10px);
+    //   line-height: 1.5;
+    // }
+    &:nth-of-type(2) {
+      margin-top: 3rem;
     }
   }
 }
@@ -211,46 +250,46 @@
       margin-right: 0;
     }
     &:nth-child(n + 4) {
-      margin-top: get_vw(160, $vwPc);
+      margin-top: get_vw(160);
     }
   }
   &_img {
     aspect-ratio: 1.25/1;
     width: 100%;
     height: auto;
-    margin-bottom: get_vw(30, $vwPc);
+    margin-bottom: get_vw(30);
   }
   &_name {
-    margin-bottom: get_vw(20, $vwPc);
+    margin-bottom: get_vw(20);
     text-align: center;
-    @include fz_vw(30, $vwPc);
+    @include fz_vw(30);
   }
   &_description {
     line-height: 1.5;
-    @include fz_vw(30, $vwPc);
+    @include fz_vw(30);
   }
 }
 
 .careers {
   &_type {
-    margin-bottom: get_vw(150, $vwPc);
+    margin-bottom: get_vw(150);
   }
   &_item {
-    margin-bottom: get_vw(100, $vwPc);
+    margin-bottom: get_vw(100);
     &:last-child {
       margin-bottom: 0;
     }
   }
   &_title {
-    margin-bottom: get_vw(25, $vwPc);
-    @include fz_vw(40, $vwPc);
+    margin-bottom: get_vw(25);
+    @include fz_vw(40);
   }
   &_text {
     line-height: 1.5;
-    @include fz_vw(16, $vwPc);
+    @include fz_vw(16);
   }
   &_condition {
-    margin-bottom: get_vw(200, $vwPc);
+    margin-bottom: get_vw(200);
     dl {
       display: flex;
       flex-wrap: wrap;
@@ -271,7 +310,7 @@
 .form {
   &_wrap {
     display: flex;
-    padding: get_vw(30, $vwPc) 0;
+    padding: get_vw(30) 0;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     &:nth-of-type(n + 2) {
@@ -296,11 +335,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: get_vw(50, $vwPc) 0 get_vw(150, $vwPc);
+    margin: get_vw(50) 0 get_vw(150);
     text-align: center;
     input {
-      width: get_vw(30, $vwPc);
-      height: get_vw(30, $vwPc);
+      width: get_vw(30);
+      height: get_vw(30);
     }
     span {
       margin-left: 30px;
@@ -316,10 +355,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: get_vw(593, $vwPc);
-    height: get_vw(150, $vwPc);
+    width: get_vw(593);
+    height: get_vw(150);
     background-color: #fff;
     color: #000;
-    @include fz_vw(30, $vwPc);
+    @include fz_vw(30);
   }
 }

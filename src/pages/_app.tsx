@@ -1,5 +1,4 @@
 import '@/styles/reset.css';
-import '@/styles/base.scss';
 import '@/styles/style.scss';
 // import 'tailwindcss/tailwind.css';
 import Layout from '@/components/Layout';

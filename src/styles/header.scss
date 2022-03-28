@@ -5,13 +5,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: get_vw(50, $vwPc) get_vw(50, $vwPc) 0;
-  @include fz_vw(30, $vwPc);
+  padding: 2rem 3rem;
+  font-size: 3rem;
+  @include mq(md) {
+    padding: 5rem;
+    // background-color: aqua;
+  }
   &_nav {
+    // display: none;
     &_list {
       display: flex;
       &_item {
-        margin-right: get_vw(50, $vwPc);
+        // margin-right: 5rem;
+        @include mq(md) {
+          margin-right: 4rem;
+        }
         &:last-child {
           margin-right: 0;
         }

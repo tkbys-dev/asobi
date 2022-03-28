@@ -2,6 +2,10 @@
 
 html {
   scroll-behavior: smooth;
+  @include fz_vw(10);
+  @include mq(md) {
+    @include fz_vw_pc(10);
+  }
 }
 
 body {
@@ -11,13 +15,11 @@ body {
   background-color: #000;
   color: #fff;
   font-family: 'Noto Sans', sans-serif;
-  scroll-behavior: smooth;
-  @include fz_vw(20, $vwPc);
 }
 
-.dec {
-  font-size: 96px;
-}
+// .dec {
+//   font-size: 96px;
+// }
 
 .top {
   &_title {
