@@ -5,7 +5,10 @@
     left: get_vw(182);
     transform: translateY(-50%);
     font-family: 'Vujahday Script', cursive;
-    @include fz_vw(60);
+    @include mq(md) {
+      left: 18.2rem;
+      font-size: 6rem;
+    }
   }
   &_image {
     // position: absolute;
