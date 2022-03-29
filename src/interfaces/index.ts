@@ -22,3 +22,11 @@ export interface ServiceInfo {
   };
   body?: string;
 }
+
+export type IStyleState = {
+  bodyStyle: string;
+};
+export type BodyUpdateAction = {
+  type: 'updateBodyStyle';
+  payload: { bodyStyle: string };
+};
