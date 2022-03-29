@@ -40,7 +40,7 @@ export default function Header() {
           } else {
             return (
               <>
-                <nav className="header_nav">
+                {/* <nav className="header_nav">
                   <ul className="header_nav_list">
                     <li className="header_nav_list_item">
                       <Link href="/works">
@@ -68,7 +68,7 @@ export default function Header() {
                       </Link>
                     </li>
                   </ul>
-                </nav>
+                </nav> */}
               </>
             );
           }
