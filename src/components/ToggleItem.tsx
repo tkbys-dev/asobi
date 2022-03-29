@@ -1,20 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { StyleContext } from 'libs/context';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
+type Overflow = 'auto' | 'hidden';
 
 const variants = {
   open: { display: 'flex', opacity: 1 },
   closed: { display: 'none', opacity: 0 },
 };
-
-export default function ToggleItem() {
+const ToggleItem = () => {
+  const { state } = useContext(StyleContext);
+  const [overflow, setOverflow] = useState<Overflow>('hidden');
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    return () => {
-      // document.body.style.overflow = 'hidden';
-    };
+    setBodyStyle();
   }, [isOpen]);
+
+  const setBodyStyle = () => {
+    if (!isOpen) {
+      // setOverflow('auto');
+      document.body.style.overflow = 'auto';
+    } else {
+      // setOverflow('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  };
 
   return (
     <>
@@ -22,25 +35,29 @@ export default function ToggleItem() {
         variants={{
           open: {
             transition: {
-              staggeredChildren: 0.5,
+              // staggeredChildren: 0.5,
             },
           },
         }}
         animate={isOpen ? 'open' : 'closed'}
         className="header_btn"
-        onClick={() => setIsOpen((isOpen) => !isOpen)}
+        onClick={() => {
+          setIsOpen((isOpen) => !isOpen);
+          setBodyStyle();
+        }}
       >
         <motion.span
           variants={{
             open: {
-              top: 0,
-              bottom: 0,
-              margin: 'auto',
+              top: '50%',
+              // bottom: 0,
+              // margin: 'auto',
               opacity: 1,
               transform: 'rotate(135deg)',
             },
             closed: { opacity: 1 },
           }}
+          // style={{ overflow: overflow }}
         ></motion.span>
         <motion.span
           variants={{
@@ -51,9 +68,9 @@ export default function ToggleItem() {
         <motion.span
           variants={{
             open: {
-              top: 0,
-              bottom: 0,
-              margin: 'auto',
+              // top: 0,
+              bottom: '45%',
+              // margin: 'auto',
               opacity: 1,
               transform: 'rotate(-135deg)',
             },
@@ -112,4 +129,5 @@ export default function ToggleItem() {
       </motion.nav>
     </>
   );
-}
+};
+export default ToggleItem;
