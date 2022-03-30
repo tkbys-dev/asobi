@@ -3,29 +3,36 @@ import type p5Type from 'p5';
 let x = 50;
 let y = 50;
 
-const canvasX = 500;
+const canvasX = 1000;
 const canvasY = 500;
 
 export const setup = (p5: p5Type, canvasParentRef: Element): void => {
-  p5.createCanvas(canvasX, canvasY).parent(canvasParentRef);
+  p5.createCanvas(canvasX, canvasY, 'webgl').parent(canvasParentRef);
 };
 
 export const draw = (p5: p5Type): void => {
-  p5.background(0);
-  p5.ellipse(x, y, 70, 70);
-  if (x !== canvasX - 50 && y === 50) {
-    x++;
-  }
+  // p5.setup = () => {
+  //   p5.createCanvas(720, 400, "webgl");
+  // };
 
-  if (x === canvasX - 50 && y !== canvasY - 50) {
-    y++;
-  }
+  p5.draw = () => {
+    p5.background(0);
+    p5.rotateY(p5.frameCount * 0.01);
 
-  if (y === canvasY - 50 && x !== 50) {
-    x--;
-  }
-
-  if (y !== 50 && x === 50) {
-    y--;
-  }
+    for (let j = 0; j < 5; j++) {
+      p5.push();
+      for (let i = 0; i < 80; i++) {
+        p5.translate(
+          p5.sin(p5.frameCount * 0.001 + j) * 100,
+          p5.sin(p5.frameCount * 0.001 + j) * 100,
+          i * 0.1
+        );
+        p5.rotateZ(p5.frameCount * 0.002);
+        p5.push();
+        p5.sphere(8, 6, 4);
+        p5.pop();
+      }
+      p5.pop();
+    }
+  };
 };
