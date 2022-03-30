@@ -8,13 +8,15 @@ export default function Layout({ children }: any) {
 
   return (
     <>
-      <Header />
-      {children}
-      {(() => {
-        if (router.pathname !== '/') {
-          return <Footer />;
-        }
-      })()}
+      <div className="wrapper">
+        <Header />
+        {children}
+        {(() => {
+          if (router.pathname !== '/') {
+            return <Footer />;
+          }
+        })()}
+      </div>
     </>
   );
 }

@@ -17,11 +17,13 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-// .dec {
-//   font-size: 96px;
-// }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
 
-.top {
-  &_title {
-  }
+.main {
+  flex: 1;
 }
