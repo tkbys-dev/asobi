@@ -11,22 +11,40 @@ let positionX: number[] = [];
 let positionY: number[] = [];
 let velocityX: number[] = [];
 let velocityY: number[] = [];
+let mouseX: number = 0;
+let mouseY: number = 0;
 
-function addNewParticle(p5: p5Type): void {
+// function mouseClicked() {
+//   console.log('aaa');
+// }
+
+// function mouseDragged() {}
+
+export const mouseClicked = (p5: p5Type): void => {
+  // const addNewParticle = () => {
   mass.push(p5.random(0.003, 0.03));
-  positionX.push(p5.mouseX);
-  positionY.push(p5.mouseY);
+  positionX.push(mouseX);
+  positionY.push(mouseY);
   velocityX.push(0);
   velocityY.push(0);
-}
+  // console.log(positionY);
+  // };
+  // addNewParticle();
+  // console.log('aaaa');
+};
 
-function mouseClicked() {
-  addNewParticle(p5);
-}
-
-function mouseDragged() {
-  addNewParticle(p5);
-}
+export const mouseDragged = (p5: p5Type): void => {
+  // const addNewParticle = () => {
+  mass.push(p5.random(0.003, 0.03));
+  positionX.push(mouseX);
+  positionY.push(mouseY);
+  velocityX.push(0);
+  velocityY.push(0);
+  console.log(positionY);
+  // };
+  // addNewParticle();
+  // console.log('aaaa');
+};
 
 export const setup = (p5: p5Type, canvasParentRef: Element): void => {
   p5.createCanvas(p5.windowWidth, p5.windowHeight, 'webgl').parent(
@@ -38,10 +56,8 @@ export const setup = (p5: p5Type, canvasParentRef: Element): void => {
 
 export const draw = (p5: p5Type): void => {
   p5.draw = () => {
-    addNewParticle(p5);
-
     p5.background(32);
-
+    // p5.background('#fff');
     for (var particleA = 0; particleA < mass.length; particleA++) {
       var accelerationX = 0,
         accelerationY = 0;
