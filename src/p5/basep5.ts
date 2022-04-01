@@ -30,7 +30,7 @@ export const mouseDragged = (p5: p5Type): void => {
 };
 
 export const setup = (p5: p5Type, canvasParentRef: Element): void => {
-  p5.createCanvas(p5.windowWidth, p5.windowHeight, 'webgl').parent(
+  p5.createCanvas(p5.windowWidth, p5.windowHeight, 'p2d').parent(
     canvasParentRef
   );
   p5.noStroke();
