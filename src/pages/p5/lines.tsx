@@ -12,10 +12,12 @@ const lines: NextPage = () => {
         setup={setup}
         draw={draw}
         windowResized={windowResized}
-        style={{
-          // flex: 1,
-          height: '100%',
-        }}
+        style={
+          {
+            // flex: 1,
+            // height: '100%',
+          }
+        }
       />
     </>
   );
