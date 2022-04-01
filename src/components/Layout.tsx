@@ -9,10 +9,14 @@ export default function Layout({ children }: any) {
   return (
     <>
       <div className="wrapper">
-        <Header />
+        {(() => {
+          if (router.pathname !== '/p5/dots') {
+            return <Header />;
+          }
+        })()}
         {children}
         {(() => {
-          if (router.pathname !== '/') {
+          if (router.pathname !== '/' && router.pathname !== '/p5/dots') {
             return <Footer />;
           }
         })()}
