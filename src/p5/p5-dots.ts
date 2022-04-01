@@ -28,7 +28,7 @@ export const setup = (p5: p5Type, canvasParentRef: Element): void => {
 
 export const draw = (p5: p5Type): void => {
   // p5.draw = () => {
-  p5.background(32);
+  p5.background('#000');
 
   for (let particleA = 0; particleA < mass.length; particleA++) {
     let accelerationX = 0;

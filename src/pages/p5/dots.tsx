@@ -22,6 +22,7 @@ const dots: NextPage = () => {
         windowResized={windowResized}
         style={{
           flex: 1,
+          height: '100vh',
           // textAlign: 'center'
         }}
       />
