@@ -10,13 +10,20 @@ export default function Layout({ children }: any) {
     <>
       <div className="wrapper">
         {(() => {
-          if (router.pathname !== '/p5/dots') {
+          if (
+            router.pathname !== '/p5/dots' &&
+            router.pathname !== '/p5/lines'
+          ) {
             return <Header />;
           }
         })()}
         {children}
         {(() => {
-          if (router.pathname !== '/' && router.pathname !== '/p5/dots') {
+          if (
+            router.pathname !== '/' &&
+            router.pathname !== '/p5/dots' &&
+            router.pathname !== '/p5/lines'
+          ) {
             return <Footer />;
           }
         })()}
