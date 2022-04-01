@@ -13,7 +13,7 @@ const lines: NextPage = () => {
         draw={draw}
         windowResized={windowResized}
         style={{
-          flex: 1,
+          // flex: 1,
           height: '100vh',
           // textAlign: 'center'
         }}
