@@ -1,4 +1,4 @@
-import type p5Type from 'p5';
+import p5Type from 'p5';
 
 let x = 50;
 let y = 50;
@@ -7,10 +7,14 @@ const canvasX = 1500;
 const canvasY = 1000;
 
 let mass: Array<number> = [];
+let color: Array<string> = [];
+
 let positionX: Array<number> = [];
 let positionY: Array<number> = [];
 let velocityX: Array<number> = [];
 let velocityY: Array<number> = [];
+
+const palette: Array<number> = [1, 3, 3, 4];
 
 export const setup = (p5: p5Type, canvasParentRef: Element): void => {
   p5.createCanvas(p5.windowWidth, p5.windowHeight, 'p2d').parent(
@@ -18,7 +22,8 @@ export const setup = (p5: p5Type, canvasParentRef: Element): void => {
   );
   p5.noStroke();
   //水玉の色
-  p5.fill(64, 255, 255, 192);
+  p5.fill('aqua');
+  // p5.push(p5.palette);
 };
 
 export const draw = (p5: p5Type): void => {
