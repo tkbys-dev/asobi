@@ -1,11 +1,11 @@
 import dynamic from 'next/dynamic';
 import type { NextPage } from 'next';
-import { draw, setup, mouseClicked, mouseDragged } from 'p5/basep5';
+import { setup, draw, mouseClicked, mouseDragged } from 'p5/p5-dots';
 // import { setup, draw, mouseClicked, mouseDragged } from 'p5/p5';
 
 const Sketch = dynamic(() => import('react-p5'), { ssr: false });
 
-const processing: NextPage = () => {
+const dots: NextPage = () => {
   return (
     <>
       <Sketch
@@ -13,7 +13,10 @@ const processing: NextPage = () => {
         draw={draw}
         mouseClicked={mouseClicked}
         mouseDragged={mouseDragged}
-        style={{ flex: 1, textAlign: 'center' }}
+        style={{
+          flex: 1,
+          // textAlign: 'center'
+        }}
       />
       {/* <iframe
         src="https://openprocessing.org/sketch/492096/embed/"
@@ -24,4 +27,4 @@ const processing: NextPage = () => {
   );
 };
 
-export default processing;
+export default dots;
