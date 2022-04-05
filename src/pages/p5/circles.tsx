@@ -11,6 +11,11 @@ import {
 } from 'p5/p5-circles';
 import { useEffect } from 'react';
 import { Circles } from '@/components/p5/Circles';
+// import { P5Wrapper } from '@/components/P5Wrapper';
+const P5Wrapper = dynamic(() => import('@/components/P5Wrapper'), {
+  ssr: false,
+});
+import { sineCosine } from 'p5/sine-cosine';
 
 const Sketch = dynamic(() => import('react-p5'), { ssr: false });
 
@@ -34,7 +39,8 @@ const circles: NextPage = () => {
           // textAlign: 'center'
         }}
       /> */}
-      <Circles />
+      {/* <Circles /> */}
+      <P5Wrapper sketch={sineCosine} />
     </>
   );
 };
