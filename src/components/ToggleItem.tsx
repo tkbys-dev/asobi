@@ -3,6 +3,7 @@ import { StyleContext } from 'libs/context';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import useGlobalStore from 'store/global';
 
 type Overflow = 'auto' | 'hidden';
 
@@ -13,21 +14,24 @@ const variants = {
 const ToggleItem = () => {
   const { state } = useContext(StyleContext);
   const [overflow, setOverflow] = useState<Overflow>('hidden');
+
   const [isOpen, setIsOpen] = useState(false);
+  const { isMenuOpen, setMenu } = useGlobalStore();
 
   useEffect(() => {
-    setBodyStyle();
-  }, [isOpen]);
+    setMenu(isOpen);
+  }, [isOpen, setMenu]);
 
-  const setBodyStyle = () => {
-    if (!isOpen) {
-      // setOverflow('auto');
-      document.body.style.overflow = 'auto';
+  useEffect(() => {
+    // setBodyStyle();
+    // const setBodyStyle = () => {
+    if (isMenuOpen) {
+      document.body.classList.add('overflow-hidden');
     } else {
-      // setOverflow('hidden');
-      document.body.style.overflow = 'hidden';
+      document.body.classList.remove('overflow-hidden');
     }
-  };
+    // };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -43,7 +47,7 @@ const ToggleItem = () => {
         className="header_btn"
         onClick={() => {
           setIsOpen((isOpen) => !isOpen);
-          setBodyStyle();
+          // setBodyStyle();
         }}
       >
         <motion.span
