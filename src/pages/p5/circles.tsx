@@ -9,7 +9,6 @@ import {
   windowResized,
 } from 'p5/p5-circles';
 import { useEffect } from 'react';
-// import { setup, draw, mouseClicked, mouseDragged } from 'p5/p5';
 
 const Sketch = dynamic(() => import('react-p5'), { ssr: false });
 

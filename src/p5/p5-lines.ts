@@ -5,11 +5,13 @@ let locationY: number;
 let velocityX: number;
 let velocityY: number;
 
+//10秒間 (1秒=1000)
+const setTime = 10000;
+
 export const setup = (p5: p5Type, canvasParentRef: Element): void => {
   p5.createCanvas(p5.windowWidth, p5.windowHeight, 'p2d').parent(
     canvasParentRef
   );
-  for (let i = 0; i < 100; i++) {}
   p5.frameRate(60);
   p5.background(0);
   locationX = 0;
@@ -20,21 +22,22 @@ export const setup = (p5: p5Type, canvasParentRef: Element): void => {
 
 export const draw = (p5: p5Type): void => {
   let diameter = p5.random(100);
+  const currentTime = p5.millis();
+  console.log(currentTime);
+
   locationX = locationX + velocityX;
   locationY = locationY + velocityY;
   p5.stroke('#fff');
-  // p5.fill(p5.random(255), p5.random(255), p5.random(255));
-  // p5.ellipse(p5.random(p5.width), p5.random(p5.height), diameter, diameter);
-  // console.log(locationX);
-  // for (let i = 0; i < 100; i++) {
-  p5.line(p5.random(locationX), p5.random(locationY), locationX, locationY);
-  if (locationX < 0 || locationX > p5.width) {
-    velocityX = velocityX * -1;
+
+  if (currentTime < setTime) {
+    p5.line(p5.random(locationX), p5.random(locationY), locationX, locationY);
+    if (locationX < 0 || locationX > p5.width) {
+      velocityX = velocityX * -1;
+    }
+    if (locationY < 0 || locationY > p5.height) {
+      velocityY = velocityY * -1;
+    }
   }
-  if (locationY < 0 || locationY > p5.height) {
-    velocityY = velocityY * -1;
-  }
-  // }
 };
 
 export const windowResized = (p5: p5Type): void => {
