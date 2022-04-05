@@ -4,7 +4,7 @@ import {
   setup,
   draw,
   // mouseClicked,
-  // mouseDragged,
+  mouseDragged,
   mouseMoved,
   windowResized,
 } from 'p5/p5-circles';
@@ -19,8 +19,8 @@ const circles: NextPage = () => {
         setup={setup}
         draw={draw}
         // mouseClicked={mouseClicked}
-        // mouseDragged={mouseDragged}
-        mouseMoved={mouseMoved}
+        mouseDragged={mouseDragged}
+        // mouseMoved={mouseMoved}
         windowResized={windowResized}
         style={{
           flex: 1,

@@ -10,6 +10,10 @@ export const setup = (p5: p5Type, canvasParentRef: Element): void => {
 
 export const draw = (p5: p5Type): void => {};
 
+export const mouseDragged = (p5: p5Type): void => {
+  p5.circle(p5.mouseX, p5.mouseY, 100);
+};
+
 export const mouseMoved = (p5: p5Type): void => {
   p5.circle(p5.mouseX, p5.mouseY, 100);
 };
