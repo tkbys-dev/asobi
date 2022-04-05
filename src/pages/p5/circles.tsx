@@ -10,6 +10,7 @@ import {
   windowResized,
 } from 'p5/p5-circles';
 import { useEffect } from 'react';
+import { Circles } from '@/components/p5/Circles';
 
 const Sketch = dynamic(() => import('react-p5'), { ssr: false });
 
@@ -20,7 +21,7 @@ const circles: NextPage = () => {
 
   return (
     <>
-      <Sketch
+      {/* <Sketch
         preload={preload}
         setup={setup}
         draw={draw}
@@ -32,13 +33,8 @@ const circles: NextPage = () => {
           height: '100vh',
           // textAlign: 'center'
         }}
-      />
-      ;
-      {/* <iframe
-        src="https://openprocessing.org/sketch/492096/embed/"
-        width="400"
-        height="400"
-      ></iframe> */}
+      /> */}
+      <Circles />
     </>
   );
 };
