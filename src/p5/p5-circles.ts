@@ -1,13 +1,13 @@
 import p5 from 'p5';
-import 'p5/lib/addons/p5.sound';
+// import 'p5/lib/addons/p5.sound';
 // require('p5/lib/addons/p5.sound');
 
 let sound: string;
 
 export const preload = (p5) => {
-  if (typeof window !== 'undefined') {
-    sound = p5.Oscillator();
-  }
+  // if (typeof window !== 'undefined') {
+  //   sound = p5.Oscillator();
+  // }
 };
 
 export const setup = (p: p5, canvasParentRef: Element): void => {
