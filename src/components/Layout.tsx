@@ -12,7 +12,8 @@ export default function Layout({ children }: any) {
         {(() => {
           if (
             router.pathname !== '/p5/dots' &&
-            router.pathname !== '/p5/lines'
+            router.pathname !== '/p5/lines' &&
+            router.pathname !== '/p5/circles'
           ) {
             return <Header />;
           }
@@ -22,7 +23,8 @@ export default function Layout({ children }: any) {
           if (
             router.pathname !== '/' &&
             router.pathname !== '/p5/dots' &&
-            router.pathname !== '/p5/lines'
+            router.pathname !== '/p5/lines' &&
+            router.pathname !== '/p5/circles'
           ) {
             return <Footer />;
           }
