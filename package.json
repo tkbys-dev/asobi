@@ -27,7 +27,8 @@
     "react-scroll-parallax": "^3.0.5",
     "ress": "^5.0.2",
     "rooks": "^5.10.5",
-    "three": "^0.138.3"
+    "three": "^0.138.3",
+    "zustand": "^3.7.1"
   },
   "devDependencies": {
     "@types/node": "16.11.11",
