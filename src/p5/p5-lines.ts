@@ -14,6 +14,7 @@ export const setup = (p5: p5Type, canvasParentRef: Element): void => {
   );
   p5.frameRate(60);
   p5.background(0);
+  p5.stroke('#fff');
   locationX = 0;
   locationY = 0;
   velocityX = 20;
@@ -24,7 +25,7 @@ export const draw = (p5: p5Type): void => {
   let diameter = p5.random(100);
   const currentTime = p5.millis();
   console.log(currentTime);
-
+  p5.print('aaa');
   locationX = locationX + velocityX;
   locationY = locationY + velocityY;
   p5.stroke('#fff');

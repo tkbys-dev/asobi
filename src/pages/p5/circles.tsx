@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import type { NextPage } from 'next';
 import {
+  preload,
   setup,
   draw,
   // mouseClicked,
@@ -20,11 +21,11 @@ const circles: NextPage = () => {
   return (
     <>
       <Sketch
+        preload={preload}
         setup={setup}
         draw={draw}
-        // mouseClicked={mouseClicked}
         mouseDragged={mouseDragged}
-        // mouseMoved={mouseMoved}
+        mouseMoved={mouseMoved}
         windowResized={windowResized}
         style={{
           flex: 1,

@@ -1,24 +1,33 @@
-import p5Type from 'p5';
+import p5 from 'p5';
+import 'p5/lib/addons/p5.sound';
+// require('p5/lib/addons/p5.sound');
 
-export const setup = (p5: p5Type, canvasParentRef: Element): void => {
-  p5.createCanvas(p5.windowWidth, p5.windowHeight, 'p2d').parent(
-    canvasParentRef
-  );
-  p5.noFill();
-  p5.stroke('#fff');
+let sound: string;
+
+export const preload = (p5) => {
+  if (typeof window !== 'undefined') {
+    sound = p5.Oscillator();
+  }
 };
 
-export const draw = (p5: p5Type): void => {};
-
-export const mouseDragged = (p5: p5Type): void => {
-  p5.circle(p5.mouseX, p5.mouseY, 100);
+export const setup = (p: p5, canvasParentRef: Element): void => {
+  p.createCanvas(p.windowWidth, p.windowHeight, 'p2d').parent(canvasParentRef);
+  p.noFill();
+  p.stroke('#fff');
+  // sound.play();
 };
 
-export const mouseMoved = (p5: p5Type): void => {
-  p5.circle(p5.mouseX, p5.mouseY, 100);
+export const draw = (p: p5): void => {};
+
+export const mouseDragged = (p: p5): void => {
+  p.circle(p.mouseX, p.mouseY, 100);
 };
 
-export const windowResized = (p5: p5Type): void => {
+export const mouseMoved = (p: p5): void => {
+  p.circle(p.mouseX, p.mouseY, 100);
+};
+
+export const windowResized = (p: p5): void => {
   // コンポーネントのレスポンシブ化
-  p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+  p.resizeCanvas(p.windowWidth, p.windowHeight);
 };
