@@ -2,8 +2,9 @@ import React, { useContext, useState, useEffect } from 'react';
 import { StyleContext } from 'libs/context';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import useGlobalStore from 'store/global';
+import { useRouter } from 'next/router';
 
 type Overflow = 'auto' | 'hidden';
 
@@ -17,10 +18,15 @@ const ToggleItem = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const { isMenuOpen, setMenu } = useGlobalStore();
+  const router = useRouter();
 
   useEffect(() => {
     setMenu(isOpen);
   }, [isOpen, setMenu]);
+
+  useEffect(() => {
+    setIsOpen(isMenuOpen);
+  }, [isMenuOpen, setIsOpen]);
 
   useEffect(() => {
     // setBodyStyle();
@@ -33,6 +39,20 @@ const ToggleItem = () => {
     // };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const routeChange = () => {
+      console.log('route change start');
+      setMenu(false);
+    };
+    router.events.on('routeChangeComplete', routeChange);
+    router.events.on('hashChangeComplete', routeChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', routeChange);
+      router.events.off('hashChangeComplete', routeChange);
+    };
+  }, [router, setMenu]);
+
   return (
     <>
       <motion.a
@@ -42,95 +62,75 @@ const ToggleItem = () => {
               // staggeredChildren: 0.5,
             },
           },
+          closed: {},
         }}
+        initial="closed"
         animate={isOpen ? 'open' : 'closed'}
         className="header_btn"
         onClick={() => {
-          setIsOpen((isOpen) => !isOpen);
-          // setBodyStyle();
+          setIsOpen(!isOpen);
         }}
       >
         <motion.span
           variants={{
             open: {
               top: '50%',
-              // bottom: 0,
-              // margin: 'auto',
               opacity: 1,
-              transform: 'rotate(135deg)',
+              rotate: 135,
             },
-            closed: { opacity: 1 },
+            closed: {},
           }}
-          // style={{ overflow: overflow }}
         ></motion.span>
         <motion.span
           variants={{
             open: { opacity: 0 },
-            closed: { opacity: 1 },
+            closed: {},
           }}
         ></motion.span>
         <motion.span
           variants={{
             open: {
-              // top: 0,
               bottom: '45%',
-              // margin: 'auto',
               opacity: 1,
-              transform: 'rotate(-135deg)',
+              rotate: -135,
             },
-            closed: { opacity: 1 },
+            closed: {},
           }}
         ></motion.span>
       </motion.a>
-      <motion.nav
-        animate={isOpen ? 'open' : 'closed'}
-        initial={{ opacity: 0 }}
-        variants={variants}
-        className="header_nav"
-      >
-        <ul className="header_nav_list">
-          <li
-            className="header_nav_list_item"
-            onClick={() => setIsOpen((isOpen) => !isOpen)}
-          >
-            <Link href="/works">
-              <a>Works</a>
-            </Link>
-          </li>
-          <li
-            className="header_nav_list_item"
-            onClick={() => setIsOpen((isOpen) => !isOpen)}
-          >
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </li>
-          <li
-            className="header_nav_list_item"
-            onClick={() => setIsOpen((isOpen) => !isOpen)}
-          >
-            <Link href="/members">
-              <a>Members</a>
-            </Link>
-          </li>
-          <li
-            className="header_nav_list_item"
-            onClick={() => setIsOpen((isOpen) => !isOpen)}
-          >
-            <Link href="/careers">
-              <a>Careers</a>
-            </Link>
-          </li>
-          <li
-            className="header_nav_list_item"
-            onClick={() => setIsOpen((isOpen) => !isOpen)}
-          >
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
-          </li>
-        </ul>
-      </motion.nav>
+      <AnimatePresence exitBeforeEnter>
+        {isMenuOpen && (
+          <motion.nav className="header_nav">
+            <ul className="header_nav_list">
+              <li className="header_nav_list_item">
+                <Link href="/works">
+                  <a>Works</a>
+                </Link>
+              </li>
+              <li className="header_nav_list_item">
+                <Link href="/about">
+                  <a>About</a>
+                </Link>
+              </li>
+              <li className="header_nav_list_item">
+                <Link href="/members">
+                  <a>Members</a>
+                </Link>
+              </li>
+              <li className="header_nav_list_item">
+                <Link href="/careers">
+                  <a>Careers</a>
+                </Link>
+              </li>
+              <li className="header_nav_list_item">
+                <Link href="/contact">
+                  <a>Contact</a>
+                </Link>
+              </li>
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </>
   );
 };
