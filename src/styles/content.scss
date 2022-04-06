@@ -181,6 +181,24 @@
   }
 }
 
+.service {
+  padding: 0 3rem 0;
+  @include mq(md) {
+    padding: 0 30rem 0;
+  }
+  li {
+    margin-bottom: 3rem;
+    @include mq(md) {
+      margin-bottom: 20rem;
+    }
+    img {
+      width: 100%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 .about {
   margin-bottom: 5rem;
   @include mq(md) {

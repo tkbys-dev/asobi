@@ -3,6 +3,9 @@ import Head from 'next/head';
 import { MetaInfo, ServiceInfo } from 'interfaces';
 import { getMeta } from 'pages/api/airtable';
 import { client } from '../libs/client';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect } from 'react';
 
 interface Props {
   meta?: MetaInfo;
@@ -10,6 +13,29 @@ interface Props {
 }
 
 const About: NextPage<Props> = ({ meta, service }) => {
+  useEffect(() => {
+    if (process.browser) {
+      gsap.registerPlugin(ScrollTrigger);
+      setFadeIn();
+    }
+  }, []);
+
+  const setFadeIn = () => {
+    gsap.set('.js-fade', {
+      opacity: 0,
+      y: 20,
+    });
+    ScrollTrigger.batch('.js-fade', {
+      onEnter: (batch) =>
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+        }),
+      start: 'top 80%',
+      once: true,
+    });
+  };
+
   return (
     <>
       <Head>
@@ -19,8 +45,8 @@ const About: NextPage<Props> = ({ meta, service }) => {
         <meta property="og:url" content="aaaa.jp" />
       </Head>
       <main className="main">
-        <div className="main_inner_s">
-          <h2 className="page_title">About</h2>
+        {/* <div className="main_inner_s"> */}
+        {/* <h2 className="page_title">About</h2>
           <div className="about">
             <p className="page_head">
               私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは私たちは
@@ -75,20 +101,20 @@ const About: NextPage<Props> = ({ meta, service }) => {
                 </div>
               </div>
             </dl>
-          </div>
-        </div>
-        {/* <div className="service">
+          </div> */}
+        <div className="service">
           <ul>
             {service?.map((s) => {
               return (
-                <li key={s.id}>
+                <li key={s.id} className="js-fade">
                   <img src={s.image.url} />
                   <p>{s.body}</p>
                 </li>
               );
             })}
           </ul>
-        </div> */}
+        </div>
+        {/* </div> */}
       </main>
     </>
   );
