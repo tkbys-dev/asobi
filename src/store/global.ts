@@ -1,4 +1,5 @@
 import create from 'zustand';
+import { persist } from 'zustand/middleware';
 
 export interface IGlobalState {
   isMenuOpen: boolean;
@@ -7,7 +8,8 @@ export interface IGlobalState {
   setMenu: (flag: boolean) => void;
   setSplash: (flag: boolean) => void;
 }
-const useGlobalStore = create<IGlobalState>((set) => ({
+
+export const useGlobalStore = create<IGlobalState>((set) => ({
   isMenuOpen: false,
   isSplash: false,
   toggleMenu: () => set((state) => ({ isMenuOpen: !state.isMenuOpen })),
@@ -15,4 +17,23 @@ const useGlobalStore = create<IGlobalState>((set) => ({
   setSplash: (flag) => set((state) => ({ isSplash: flag })),
 }));
 
-export default useGlobalStore;
+// export default useGlobalStore;
+
+export interface IPersistState {
+  fishes: number;
+}
+
+export const usePersistStore = create<IPersistState>(
+  persist(
+    (set, get) => ({
+      fishes: 0,
+      addAFish: () => set({ fishes: get().fishes + 1 }),
+    }),
+    {
+      name: 'food-storage', // unique name
+      getStorage: () => sessionStorage, // (optional) by default, 'localStorage' is used
+    }
+  )
+);
+
+// export default usePersistStore;

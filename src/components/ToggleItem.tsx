@@ -3,7 +3,7 @@ import { StyleContext } from 'libs/context';
 
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import useGlobalStore from 'store/global';
+import { useGlobalStore, usePersistStore } from 'store/global';
 import { useRouter } from 'next/router';
 
 type Overflow = 'auto' | 'hidden';
